@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+<head>
+	<meta charset="utf-8">
+	<title>Mi primera página con AngularJS</title>
+	<script src="../js/angular.min.js" type="text/javascript"></script>
+	<script src="controller.js" type="text/javascript"></script>
+</head>
+<body ng-controller="FirstController">
+	{{nombre}}
+	<p><strong>Valor del padre: </strong>{{$parent.nombre}}</p>
+	<div ng-controller="ChildController">
+		<p><strong>Valor del padre del padre: </strong>{{$parent.$parent.nombre}}</p>
+		<p><strong>Valor del padre: </strong>{{$parent.nombre}}</p>
+		<p><strong>Valor del hijo: </strong>{{nombre}}</p>
+
+		<input type="text" ng-model="$parent.nombre">
+	</div>
+</body>
+</html>
