@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+	<meta charset="utf-8">
+	<title>Ng-src y ng-cloak</title>
+	<link href="../css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/autocomplete-jquery-ui.structure.css" rel="stylesheet" type="text/css">
+	<script src="../js/angular.min.js" type="text/javascript"></script>
+	<script src="../js/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script src="../js/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="app.js" type="text/javascript"></script>
+	<style>
+	.circular{
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+	}
+
+	.no-list{
+		list-style-type: none;
+	}
+
+	body,html{
+		text-align: center;
+		background-color: #eee;
+		margin: 0px;
+	}
+	</style>
+</head>
+<body ng-controller="AppCtrl">
+	<input type="text" my-autocomplete="repos" placeholder="Buscar repositorio">
+	<ul class="no-list">
+		<li ng-repeat="repo in posts" ng-hide="main_repo && main_repo != repo.name">
+			<div class="circular" back-img="{{repo.owner.avatar_url}}"></div>
+			<h1 class="inline-block">{{repo.full_name}}</h1>
+		</li>
+	</ul>
+	<a ng-click="main_repo = null">Limpiar</a>
+</body>
+</html>
