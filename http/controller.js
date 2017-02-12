@@ -1,6 +1,6 @@
 angular.module("MyFirstApp", [])
 	.controller("FirstController", function($scope, $http){
-		$scope.post = [];
+		$scope.posts = [];
 		$scope.newPost = {};
 		$http.get("https://jsonplaceholder.typicode.com/posts")
 			.success(function(data){
