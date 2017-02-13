@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="FinalApp">
+<head>
+	<title>Post App</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--	<script src="js/angular.min.js" type="text/javascript"></script>
+	<script src="js/angular-route.min.js" type="text/javascript"></script>-->
+
+	<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+	<script src="bower_components/velocity/velocity.js" type="text/javascript"></script>
+	<script src="bower_components/moment/min/moment-with-locales.js" type="text/javascript"></script>
+	<script src="bower_components/angular/angular.js" type="text/javascript"></script>
+	<script src="bower_components/lumx/dist/lumx.js" type="text/javascript"></script>
+
+	<script src="js/angular-route.min.js" type="text/javascript"></script>
+	<!-- APP -->
+	<script src="js/app.js" type="text/javascript"></script>
+	<script src="js/directives.js" type="text/javascript"></script>
+	<script src="js/services.js" type="text/javascript"></script>
+	<script src="js/controllers.js" type="text/javascript"></script>
+</head>
+<body>
+	<nav>
+		<div class="bgc-blue-900 tc-white" flex-container="row" flex-align="center center">
+			<div flex-item="4">
+				<h1 class="fs-display-3 display-block">Posts App</h1>
+			</div>
+			<div flex-item="1">
+				<a href="#"><span class="color-white">Inicio</span></a>
+			</div>
+			<div flex-item="1">
+				<a href="#"><span class="color-white">Crear Post</span></a>
+			</div>
+		</div>
+	</nav>
+	<div flex-container="row" flex-align="center">
+		<div ng-view flex-item="9">
+			DEMO :P
+		</div>		
+	</div>
+</body>
+</html>
