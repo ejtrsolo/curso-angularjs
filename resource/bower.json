@@ -1,0 +1,22 @@
+{
+  "name": "resource",
+  "homepage": "https://github.com/aduartem/curso-angularjs",
+  "authors": [
+    "Andrés Duarte M. <andres.duarte.marquez@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "1.6.2",
+    "lumx": "^1.4.2",
+    "angular-resource": "1.6.2"
+  }
+}

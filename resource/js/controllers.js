@@ -4,5 +4,18 @@ angular.module("FinalApp")
 	User = $resource("https://jsonplaceholder.typicode.com/users/:id", {id: "@id"});
 	$scope.posts = Post.query();
 	$scope.users = User.query();
-	// query() -> GET /posts -> Un arreglo de posts
+	
+	$scope.removePost = function(post){
+		Post.delete({id: post.id}, function(data){
+			console.log(data);
+//			$scope.posts = Post.query();
+		});
+		$scope.posts = $scope.posts.filter(function(element){
+			return element.id !== post.id; // Si retorna false, el elemento se elimina del array.
+		});
+	}
+})
+.controller("PostController", function($scope, $resource, $routeParams){
+	Post = $resource("https://jsonplaceholder.typicode.com/posts/:id", {id: "@id"});
+	$scope.post = Post.get({id: $routeParams.id});
 });
